@@ -1,0 +1,20 @@
+// ERD for Device, User and Usage
+digraph {
+	Device [label="Device
+Model (PK)
+Branding
+MarketingName
+Device"]
+	User [label="User
+User_ID (PK)
+Platform
+Platform_Version
+Device"]
+	Usage [label="Usage
+Use_ID (PK)
+Outgoing_Mins_Per_Month
+Outgoing_SMS_Per_Month
+Monthly_MB"]
+	Device -> User [label=Used_By]
+	User -> Usage [label=Has]
+}
